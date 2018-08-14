@@ -1,0 +1,85 @@
+@import ../common
+
+
+.todo
+  margin: 10px 0
+  &.complete
+    position: relative
+    &::before
+      position: absolute
+      display: block
+      content: ''
+      top: 50%
+      width: 100%
+      height: 1px
+      background: #a25555
+      box-shadow: 0 0 4px 0 #cc4c4c
+    .todo-text
+      opacity: .5
+
+
+.left
+  float: left
+  width: 65%
+
+
+.todo-text
+  cursor: pointer
+
+
+.edit-todo-title
+  height: 24px
+  padding: 2px 6px
+  box-sizing: border-box
+  border: 1px solid $border-color
+  border-radius: 8px
+  outline: 0
+  box-shadow: 0 0 5px 0px #0076ff
+
+
+.right
+  float: left
+  width: 35%
+  visibility: hidden
+
+
+.todo:hover
+  .right
+    visibility: visible
+
+
+.btn
+  float: right
+  width: 16px
+  height: 16px
+  background-position: 50%
+  background-repeat: no-repeat
+  border-radius: 4px
+  outline: 0
+  cursor: pointer
+  background-color: transparent
+  border: none
+
+  &.edit
+    margin-right: 5px
+    background-image: url(../shared/img/pencil.png)
+
+  &.remove
+    background-image: url(../shared/img/rubbish-bin.png)
+
+  &.up
+    margin-right: 5px
+    background-image: url(../shared/img/up.png)
+
+  &.down
+    margin-right: 5px
+    background-image: url(../shared/img/down.png)
+
+
+@media screen and (max-width: 1024px)
+  .todo
+    margin: 15px 0
+    font-size: 1.1em
+
+  .right
+    visibility: visible

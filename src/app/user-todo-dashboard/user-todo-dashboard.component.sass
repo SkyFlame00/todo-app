@@ -1,0 +1,40 @@
+@import ../common
+
+
+.panel
+  margin: 10px 5px 5px 5px
+
+
+.add-list
+  display: inline-block
+  padding: 5px 12px 5px 24px
+  background-position: 6px 50%
+  background-repeat: no-repeat
+  border-radius: 4px
+  border: none
+  outline: 0
+  cursor: pointer
+  background-image: url(../shared/img/plus.png)
+  background-size: 12px
+  background-color: $background-green
+  color: $color-green
+  border: 1px solid $border-green
+
+
+.todo-lists
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+
+
+@media screen and (max-width: 1024px)
+  .todo-lists
+    justify-content: center
+
+  .panel
+    text-align: center
+
+  .add-list
+    font-size: 1.1em
+    padding: 7px 12px 7px 24px
+    background-size: 14px

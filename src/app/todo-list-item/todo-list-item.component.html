@@ -1,0 +1,18 @@
+<div class="todo clearfix" [class.complete]="todo.complete">
+  <div class="left">
+    <span class="todo-text"
+          *ngIf="!isTodoBeingEditted"
+          (click)="toggleTodoComplete()">{{ todo.title }}</span>
+    <input type="text" class="edit-todo-title"
+           [(ngModel)]="todo.title"
+           *ngIf="isTodoBeingEditted"
+           (keyup.enter)="saveTodoTitle()" />
+  </div>
+
+  <div class="right" *ngIf="!todo.complete && !isTodoBeingEditted">
+    <button class="btn remove" (click)="removeTodo(todo)"></button>
+    <button class="btn down" (click)="downTodo()"></button>
+    <button class="btn up" (click)="upTodo()"></button>
+    <button class="btn edit" (click)="editTodoTitle()"></button>
+  </div>
+</div>

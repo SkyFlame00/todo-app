@@ -1,0 +1,44 @@
+<div class="todo-list">
+
+  <div class="header clearfix">
+    <div class="header-left">
+      <h2 *ngIf="!isHeaderBeingEditted">{{ todoList.title }}</h2>
+      <input type="text" class="edit-title"
+             [(ngModel)]="todoList.title"
+             *ngIf="isHeaderBeingEditted"
+             (keyup.enter)="saveTitle()" />
+    </div>
+    <div class="header-right">
+      <button class="delete" (click)="removeList()"></button>
+      <button class="edit" (click)="editHeader()"></button>
+    </div>
+
+  </div>
+
+  <div class="todos">
+    <app-todo-list-item class="todo" *ngFor="let todo of todoList.todos" [class.complete]="todo.complete"
+      [todo]="todo"
+      (toggleComplete)="onToggleTodoComplete($event)"
+      (remove)="onRemoveTodo($event)"
+      (up)="onUpTodo($event)"
+      (down)="onDownTodo($event)">
+    </app-todo-list-item>
+
+    <div *ngIf="todoList.todos.length == 0" class="empty-list">
+      Todo list is empty
+    </div>
+  </div>
+
+  <div class="footer clearfix">
+    <div class="left">
+      <button class="btn-footer add"
+              (click)="addTodo()"></button>
+    </div>
+
+    <div class="right">
+      <button (click)="rightTodoList()" class="btn-footer list-to-right"></button>
+      <button (click)="leftTodoList()" class="btn-footer list-to-left"></button>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,13 @@
+<div class="panel">
+  <button class="add-list" (click)="createList()">Create list</button>
+</div>
+
+<div class="todo-lists">
+  <app-todo-list
+    *ngFor="let todoList of todoLists"
+    [todoList]="todoList"
+    (remove)="onRemoveList($event)"
+    (left)="onLeftTodoList($event)"
+    (right)="onRightTodoList($event)">
+  </app-todo-list>
+</div>
