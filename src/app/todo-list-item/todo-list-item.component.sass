@@ -1,6 +1,5 @@
 @import ../common
 
-
 .todo
   margin: 10px 0
   &.complete
@@ -17,15 +16,12 @@
     .todo-text
       opacity: .5
 
-
 .left
   float: left
   width: 65%
 
-
 .todo-text
   cursor: pointer
-
 
 .edit-todo-title
   height: 24px
@@ -36,17 +32,14 @@
   outline: 0
   box-shadow: 0 0 5px 0px #0076ff
 
-
 .right
   float: left
   width: 35%
   visibility: hidden
 
-
 .todo:hover
   .right
     visibility: visible
-
 
 .btn
   float: right
@@ -59,22 +52,17 @@
   cursor: pointer
   background-color: transparent
   border: none
-
   &.edit
     margin-right: 5px
     background-image: url(../shared/img/pencil.png)
-
   &.remove
     background-image: url(../shared/img/rubbish-bin.png)
-
   &.up
     margin-right: 5px
     background-image: url(../shared/img/up.png)
-
   &.down
     margin-right: 5px
     background-image: url(../shared/img/down.png)
-
 
 @media screen and (max-width: 1024px)
   .todo

@@ -1,6 +1,5 @@
 @import ../common
 
-
 .todo-list
   position: relative
   float: left
@@ -11,7 +10,6 @@
   border-radius: 8px
   box-sizing: border-box
 
-
 .header
   display: flex
   align-items: center
@@ -19,15 +17,12 @@
   padding-bottom: 10px
   border-bottom: 1px solid $border-color
 
-
 .header-left
   float: left
   width: 75%
-
   h2
     font-size: 1.3em
     font-weight: normal
-
 
 .edit-title
   height: 24px
@@ -37,7 +32,6 @@
   border-radius: 8px
   outline: 0
   box-shadow: 0 0 5px 0px #0076ff
-
 
 .header-right
   float: left
@@ -64,14 +58,12 @@
     background-color: $red-background
     border: 1px solid $red-border
 
-
 .todo-list:hover
   .header-right
     .delete, .edit
       opacity: 1
   .footer
     visibility: visible
-
 
 .footer
   position: absolute
@@ -93,10 +85,8 @@
     float: left
     width: 50%
 
-
 .todo-list:hover
   border-radius: 8px 8px 0 0
-
 
 .btn-footer
   display: block
@@ -124,20 +114,17 @@
     background-color: rgb(235,235,235)
     border: none
 
-
 .todos
   height: calc(100% - 47px)
   padding: 6px 10px 6px 10px
   overflow-x: hidden
   box-sizing: border-box
 
-
 .empty-list
   width: 100%
   margin-top: calc(50% - 17px)
   text-align: center
   color: rgb(200,200,200)
-
 
 @media screen and (max-width: 1024px)
   .todo-list

@@ -3,7 +3,7 @@ import { Http } from '@angular/http';
 
 import { Todo } from './todo';
 
-const URL = 'http://localhost:7000';
+import URL from './shared/url'
 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -22,20 +22,14 @@ export class TodoDataService {
   upTodo(todo: Todo, todoSwap: Todo, userId: number): Observable<any> {
     return this.http.post(URL + `/users/${userId}/todo-list/${todo.todoList}/todo/${todo.id}/up`, [todo, todoSwap])
       .pipe(
-        map(response => {
-
-          return response;
-        })
+        map(response => response)
       );
   }
 
   downTodo(todo: Todo, todoSwap: Todo, userId: number): Observable<any> {
     return this.http.post(URL + `/users/${userId}/todo-list/${todo.todoList}/todo/${todo.id}/down`, [todo, todoSwap])
       .pipe(
-        map(response => {
-
-          return response;
-        })
+        map(response => response)
       );
   }
 

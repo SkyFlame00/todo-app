@@ -4,7 +4,7 @@ import { TodoList } from '../todo-list';
 
 import { TodoListDataService } from '../todo-list-data.service';
 
-const USER_ID = 1;
+import USER_ID from '../shared/default-user';
 
 @Component({
   selector: 'app-user-todo-dashboard',
@@ -15,7 +15,6 @@ const USER_ID = 1;
 export class UserTodoDashboardComponent implements OnInit {
 
   todoLists: TodoList[];
-  test: string = 'kek';
 
   constructor(
     private todoListDataService: TodoListDataService
@@ -24,10 +23,8 @@ export class UserTodoDashboardComponent implements OnInit {
   ngOnInit() {
     this.todoListDataService.getAllTodoLists(USER_ID)
       .subscribe(todoLists => {
-
         this.todoLists = todoLists;
         this.sortTodoLists();
-        console.log(this.todoLists);
       });
   }
 

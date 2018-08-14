@@ -6,7 +6,7 @@ import { TodoList } from '../todo-list';
 import { TodoListDataService } from '../todo-list-data.service';
 import { TodoDataService } from '../todo-data.service';
 
-const USER_ID = 1;
+import USER_ID from '../shared/default-user';
 
 @Component({
   selector: 'app-todo-list',

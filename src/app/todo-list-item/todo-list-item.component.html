@@ -1,4 +1,5 @@
 <div class="todo clearfix" [class.complete]="todo.complete">
+
   <div class="left">
     <span class="todo-text"
           *ngIf="!isTodoBeingEditted"
@@ -15,4 +16,5 @@
     <button class="btn up" (click)="upTodo()"></button>
     <button class="btn edit" (click)="editTodoTitle()"></button>
   </div>
+
 </div>

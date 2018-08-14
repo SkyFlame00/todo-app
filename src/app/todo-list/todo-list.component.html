@@ -1,6 +1,7 @@
 <div class="todo-list">
 
   <div class="header clearfix">
+
     <div class="header-left">
       <h2 *ngIf="!isHeaderBeingEditted">{{ todoList.title }}</h2>
       <input type="text" class="edit-title"
@@ -8,6 +9,7 @@
              *ngIf="isHeaderBeingEditted"
              (keyup.enter)="saveTitle()" />
     </div>
+
     <div class="header-right">
       <button class="delete" (click)="removeList()"></button>
       <button class="edit" (click)="editHeader()"></button>

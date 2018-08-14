@@ -4,7 +4,7 @@ import { Http } from '@angular/http';
 import { Todo } from './todo';
 import { TodoList } from './todo-list';
 
-const URL = 'http://localhost:7000';
+import URL from './shared/url'
 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -33,18 +33,14 @@ export class TodoListDataService {
   createTodoList(todoList: TodoList): Observable<TodoList> {
     return this.http.post(URL + `/user/${todoList.user}/add-list`, todoList)
       .pipe(
-        map(response => {
-          return new TodoList(response.json());
-        })
+        map(response => new TodoList(response.json()))
       );
   }
 
   changeTodoListTitle(todoList: TodoList): Observable<any> {
     return this.http.post(URL + `/users/${todoList.user}/todo-list/${todoList.id}`, todoList)
       .pipe(
-        map(response => {
-          return new TodoList(response.json());
-        })
+        map(response => new TodoList(response.json()))
       );
   }
 
