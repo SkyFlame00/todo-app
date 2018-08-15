@@ -18,6 +18,8 @@ npm i
 ng serve --port 5000
 ```
 
+That is, local front end server must be served on [http://localhost:5000](http://localhost:5000), while back end is served on [http://localhost:7000](http://localhost:7000).
+
 ## Sample server
 
 Sample server is available at [http://185.174.173.130:5000/](http://185.174.173.130:5000/).
