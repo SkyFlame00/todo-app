@@ -2,6 +2,10 @@
 
 The application lets you create and manipulate with tasks organised into lists. Initially, I was to have also implemented users system, where one could sign up and log in, but ran out of time.
 
+Pay attention:
+* Press enter to save changes when editing title of a todo list or a todo
+* Click on todo's text to cross it out
+
 ## Features
 
 * Todo lists: create, delete, move and change title
